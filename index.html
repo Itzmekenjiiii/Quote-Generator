@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <h1>RANDOM QUOTE GENERATOR</h1>
+    <p id="displayquote"></p>
+    <button onclick="generateQuote()">Generate Quote</button>
+    <style>
+        body{
+            background: linear-gradient(90deg,
+            rgba(2,0,36,1) 0%,
+            rgba(56,131,253,1) 2%,
+            rgba(21,239,255,1) 95%);
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background: linear-gradient(90deg,
+            rgba(2,0,36,1) 0%,
+            rgba(56,131,253,1) 2%,
+            rgba(21,239,255,1) 95%);
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            width: 500px;
+            height: 80px;
+        }
+
+        p{  
+            display: flex;
+            background-color: rgb(133, 210, 238);
+            text-align: center;
+            border: 10px groove black;
+            border-radius: 20px;
+            width: 1000px;
+            height: 200px;
+            font-size: 2.5em;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            color: rgb(0, 60, 57);
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        const quotes = [
+            "A Little Progress each day Adds Up to Big Results. - Satya Nan",
+            "Don't let what you cannot do interfere with what you can do. - John Wooden",
+            "Learning is never done without Errors and Defeat. - Vladimir Lenin",
+            "Believe you can and you're halfway there. - Theodore Rosswvelt",
+            "Nothing is impossible, the word itself says I'm Possible. - Audrey Hepburn",
+            "Passion First and Everything will Fall into Place. - Holly Holm",
+            "When you have a Dream, You've got to Grab it and Never Let it Go. - Carol Burnett"
+        ]
+
+        function generateQuote() {
+            const displayquote = document.getElementById('displayquote');
+            const randomGenerator = Math.floor(Math.random() * quotes.length);
+            displayquote.textContent = quotes[randomGenerator];
+        }
+    </script>
+</body>
+</html>
+
+
